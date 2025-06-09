@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compilation One</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #f6d365, #fda085, #a18cd1, #fbc2eb);
+      background-size: 200% 200%;
+      animation: gradientShift 15s ease infinite;
+      font-family: sans-serif;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .center-box {
+      background-color: rgba(50, 50, 50, 0.4);
+      color: white;
+      padding: 2rem 3rem;
+      border-radius: 1.5rem;
+      font-size: 1.5rem;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-box">Compilation One</div>
+</body>
+</html>
