@@ -85,13 +85,14 @@ html, body {
             font-size: 2rem;
             text-align: left;
             align-items: flex-start;
-            width: 50vw;
+            width: 70vw;
             margin-bottom: 5vh;
         }
         .tracklist {
             font-size: 1rem;
             flex-direction: column;
             gap: 0;
+            width: 70vw;
         }
         .tracklist-col {
             width: 100%;
