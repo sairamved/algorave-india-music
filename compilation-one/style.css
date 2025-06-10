@@ -1,0 +1,106 @@
+html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      width: 100vw;
+      min-height: 100vh;
+      font-family: 'Trispace', monospace;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .headline {
+      font-family: 'Khand';
+      font-size: 6vw;
+      line-height: 1.2;
+      margin: 0;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tracklist {
+      font-family: 'Trispace', monospace;
+      font-weight: normal;
+      font-size: 1.2vw;
+      text-align: left;
+      max-width: 100vw;
+      width: 50vw;
+      margin: 0;
+      display: flex;
+    }
+
+    ol {
+        list-style-type: decimal-leading-zero;
+    }  
+
+    .tracklist-col {
+      flex: 1 1 1;
+      min-width: auto;
+    }
+    .tracklist-col:nth-child(3) {
+      margin-left: auto;
+      text-align: right;
+      padding-top: auto;
+    }
+    .tracklist-col:nth-child(3) ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tracklist-col:nth-child(1),
+    .tracklist-col:nth-child(2) {
+        margin-right: auto;
+    }
+
+    .tracklist-col ol,
+    .tracklist-col ul {
+      margin: auto;
+      padding: 0;
+      list-style-position: inside;
+    }
+
+    @media (max-width: 900px) {
+      .headline-wrapper{
+        max-width: 50%;
+        width: 100%;
+      }
+      .tracklist-col {
+        flex: 1 1 1;
+      }
+    }
+    @media (max-width: 600px) {
+        .headline {
+            font-size: 2rem;
+            text-align: left;
+            align-items: flex-start;
+            width: 50vw;
+            margin-bottom: 5vh;
+        }
+        .tracklist {
+            font-size: 1rem;
+            flex-direction: column;
+            gap: 0;
+        }
+        .tracklist-col {
+            width: 100%;
+        }
+
+        .tracklist-col:nth-child(3) {
+                text-align: left;
+                margin-left: 0;
+                margin-top: 5vh;
+                
+        }
+    }
