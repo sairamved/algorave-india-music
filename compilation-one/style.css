@@ -75,6 +75,7 @@ html, body {
     margin: 1rem 0;
     font-family: 'Space Mono', monospace;
     text-transform: uppercase;
+    padding-bottom: env(safe-area-inset-bottom);
   }
   
   .cta a {
@@ -98,6 +99,7 @@ html, body {
     justify-content: space-between;
     font-family: 'Space Mono', monospace;
     /* text-transform: uppercase; */
+    padding-bottom: env(safe-area-inset-bottom);
   }
   
   .footer-links a {
