@@ -185,6 +185,7 @@ html, body {
     line-height: 1;
     display: inline-block;
     letter-spacing: normal;
+    visibility: hidden;
   }
 
 /* Responsive styles for mobile */
