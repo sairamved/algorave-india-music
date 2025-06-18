@@ -220,9 +220,14 @@ html, body {
     padding-bottom: 1rem;
   }
 
+
+
   .bandcamp-player {
   margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  height: 140%;
+  width: 100%;
+  overflow: hidden;
   }
 
 
@@ -278,9 +283,32 @@ html, body {
   #line1 { font-size: calc(4vw + 1vh); }
   #line2 { font-size: calc(4.5vw + 1vh); }
   #line3 { font-size: calc(5vw + 1vh); }
+
+
+
+  .track-image {
+    width: 100%;
+  }
+
+
+  .track-description {
+  font-family: "Space Mono", monospace;
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.track-description {
+.heading-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+  .track-description {
   font-family: "Space Mono", monospace;
   padding: 1rem;
   text-align: left;
