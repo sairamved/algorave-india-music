@@ -1,40 +1,40 @@
 const trackData = [
     { title: "Past Lives", image: "assets/track1.png", link: "past-lives.html" },
-    { title: "insectual", image: "assets/track1.png", link: "insectual.html" },
-    { title: "D:$!n+e(-)", image: "assets/track1.png", link: "dollar-sign.html" },
-    { title: "Taal Summit", image: "assets/track1.png", link: "taal-summit.html" },
-    { title: "infract[ion]", image: "assets/track1.png", link: "infract-ion.html" },
-    { title: "Gulf of Hypernerds", image: "assets/track1.png", link: "gulf-of-hypernerds.html" },
-    { title: "Baby Gharial", image: "assets/track1.png", link: "baby-gharial.html" },
-    { title: "ItLies", image: "assets/track1.png", link: "itlies.html" },
-    { title: "Winterscapes Ashlands", image: "assets/track1.png", link: "winterscapes-ashlands.html" },
-    { title: "hyperbole_samosa", image: "assets/track1.png", link: "hyperbole-samosa.html" }
+    { title: "insectual", image: "assets/track1.png", link: "track2.html" },
+    { title: "D:$!n+e(-)", image: "assets/track1.png", link: "track3.html" },
+    { title: "Taal Summit", image: "assets/track1.png", link: "track4.html" },
+    { title: "infract[ion]", image: "assets/track1.png", link: "track5.html" },
+    { title: "Gulf of Hypernerds", image: "assets/track1.png", link: "track6.html" },
+    { title: "Baby Gharial", image: "assets/track1.png", link: "track7.html" },
+    { title: "ItLies", image: "assets/track1.png", link: "track8.html" },
+    { title: "Winterscapes Ashlands", image: "assets/track1.png", link: "track9.html" },
+    { title: "hyperbole_samosa", image: "assets/track1.png", link: "track10.html" }
   ];
-  
-if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
-    const gridContainer = document.querySelector(".right"); // Update to select the right section directly
+
+if (document.getElementById("trackGrid")) {
+    const gridContainer = document.getElementById("trackGrid");
     const isMobile = window.innerWidth <= 768;
-  
+    
     trackData.forEach((track, i) => {
       const box = document.createElement("div");
       const img = document.createElement("img");
       const label = document.createElement("div");
-  
+    
       img.src = track.image;
       img.className = "track-image";
-  
+    
       label.className = "track-title";
       label.innerText = track.title;
-  
+    
       box.appendChild(img);
       box.appendChild(label);
-  
+    
       if (!isMobile) {
         const applyHoverEffect = (e) => {
           const rect = box.getBoundingClientRect();
           const x = e.clientX - rect.left - rect.width / 2;
           const y = e.clientY - rect.top - rect.height / 2;
-  
+    
           gsap.to(img, {
             duration: 0.05,
             x: x / 10,
@@ -43,20 +43,20 @@ if (window.location.pathname.endsWith("index.html") || window.location.pathname 
             rotateX: -y / 15,
             ease: "power2.out",
           });
-  
+    
           gsap.to(box, {
             duration: 0.1,
             backgroundColor: "#F5EF69",
             ease: "power2.out",
           });
-  
+    
           gsap.to(label, {
             duration: 0.3,
             color: "#000000",
             ease: "power2.out",
           });
         };
-  
+    
         const removeHoverEffect = () => {
           gsap.to(img, {
             duration: 0.4,
@@ -66,28 +66,28 @@ if (window.location.pathname.endsWith("index.html") || window.location.pathname 
             rotateX: 0,
             ease: "power2.in",
           });
-  
+    
           gsap.to(box, {
             duration: 0.4,
             backgroundColor: "#000000",
             ease: "power2.in",
           });
-  
+    
           gsap.to(label, {
             duration: 0.4,
             color: "#FFFFFF",
             ease: "power2.in",
           });
         };
-  
+    
         box.addEventListener("mousemove", applyHoverEffect);
         box.addEventListener("mouseleave", removeHoverEffect);
       }
-  
+    
       box.addEventListener("click", () => {
         window.location.href = track.link;
       });
-  
+    
       gridContainer.appendChild(box);
     });
   }
