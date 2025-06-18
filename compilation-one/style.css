@@ -116,6 +116,7 @@ html, body {
     position: relative;
   }
   
+  
 .right > div {
     background-color: black;
     position: relative;
@@ -136,6 +137,7 @@ html, body {
     text-align: center;
     font-family: 'Space Mono', monospace;
     font-size: 0.9rem;
+    overflow-wrap: anywhere;
 }
 
 .right > div .track-image,
@@ -190,6 +192,22 @@ html, body {
     visibility: hidden;
   }
 
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Responsive styles for mobile */
 @media (max-width: 768px), (orientation: portrait) {
   html, body {
@@ -224,6 +242,24 @@ html, body {
     box-sizing: border-box;
   }
 
+  .two-column-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+    border: none;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .column {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
   .line {
     font-size: calc(5vw + 1vh); 
   }
@@ -231,4 +267,19 @@ html, body {
   #line1 { font-size: calc(4vw + 1vh); }
   #line2 { font-size: calc(4.5vw + 1vh); }
   #line3 { font-size: calc(5vw + 1vh); }
+}
+
+.track-description {
+  font-family: "Space Mono", monospace;
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.heading-link {
+  text-decoration: none;
+  color: inherit;
 }
