@@ -215,6 +215,17 @@ html, body {
     overflow-x: hidden;
   }
 
+  body.past-lives .left {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .bandcamp-player {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  }
+
+
   .container {
     display: flex;
     flex-direction: column;
@@ -224,7 +235,7 @@ html, body {
   }
 
   .left {
-    height: 100dvh;
+    height: auto;
     width: 100%;
     border: none;
     overflow: hidden;
