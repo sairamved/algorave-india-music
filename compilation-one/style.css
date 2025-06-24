@@ -152,7 +152,7 @@ html, body {
 .track-image {
   width: 50%;
   transform-style: preserve-3d;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-out;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -219,8 +219,37 @@ html, body {
   font-size: 1rem;
   color: white;
   margin: 1rem 0;
-  text-align: left;
-  line-height: 1.5;
+  text-align: justify;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0 1.5rem 0;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.landing-logo {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  opacity: 80%;
+  transition: transform 0.2s;
+}
+
+.landing-logo:hover {
+  opacity: 100%;
+}
+
+::selection {
+  background: #F5EF69;
+  color: #000;
 }
 
 /* Responsive styles for mobile */
