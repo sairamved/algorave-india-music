@@ -197,6 +197,8 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .track-description {
@@ -239,17 +241,159 @@ html, body {
   max-width: 120px;
   height: auto;
   display: block;
-  opacity: 80%;
+  opacity: 100%;
   transition: transform 0.2s;
 }
 
 .landing-logo:hover {
-  opacity: 100%;
+  opacity: 80%;
 }
 
 ::selection {
   background: #F5EF69;
   color: #000;
+}
+
+.track-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  width: fit-content;
+}
+
+.cover-img {
+  width: 150px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Track Info Redesign */
+.track-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  font-family: "Space Mono", monospace;
+  box-sizing: border-box;
+}
+
+
+.track-info::-webkit-scrollbar {
+  width: 6px;
+}
+
+.track-info::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.track-info::-webkit-scrollbar-thumb {
+  background: #F5EF69;
+  border-radius: 3px;
+}
+
+.track-info::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 239, 105, 0.8);
+}
+
+.track-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid #F5EF69;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+.track-number {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  color: white;
+  opacity: 1;
+}
+
+.artist-credits {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.artist-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.artist-label {
+  font-size: 0.75rem;
+  color: #F5EF69;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+.artist-name {
+  font-size: 1rem;
+  color: white;
+}
+
+.track-process {
+  flex-grow: 1;
+}
+
+.process-title {
+  font-size: 0.75rem;
+  color: #F5EF69;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+}
+
+.process-description {
+  color: white;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.track-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.play-button,
+.download-button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.play-button:hover {
+  background: #F5EF69;
+  color: black;
+  border-color: #F5EF69;
+}
+
+.download-button:hover {
+  background: white;
+  color: black;
 }
 
 /* Responsive styles for mobile */
@@ -313,8 +457,9 @@ html, body {
     width: 100%;
     padding: 1rem;
     border: none;
-    overflow: hidden;
+    overflow: visible;
     box-sizing: border-box;
+    height: auto;
   }
 
   .line {
@@ -327,5 +472,37 @@ html, body {
 
   .track-image {
     width: 100%;
+  }
+
+  .track-info {
+    padding: 1.5rem;
+    gap: 1.5rem;
+    height: auto;
+    overflow-y: visible;
+    overflow-x: visible;
+  }
+
+
+  .track-info::-webkit-scrollbar {
+    display: none;
+  }
+
+  .track-title {
+    font-size: 2rem;
+  }
+
+  .track-number {
+    font-size: 1.2rem;
+  }
+
+  .track-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .play-button,
+  .download-button {
+    padding: 1rem;
+    font-size: 0.9rem;
   }
 }

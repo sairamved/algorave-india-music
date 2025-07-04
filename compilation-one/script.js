@@ -1,96 +1,67 @@
-const trackData = [
-    { title: "Past Lives", image: "assets/track1.png", link: "past-lives.html" },
-    { title: "insectual", image: "assets/track1.png", link: "track2.html" },
-    { title: "D:$!n+e(-)", image: "assets/track1.png", link: "track3.html" },
-    { title: "Taal Summit", image: "assets/track1.png", link: "track4.html" },
-    { title: "infract[ion]", image: "assets/track1.png", link: "track5.html" },
-    { title: "Gulf of Hypernerds", image: "assets/track1.png", link: "track6.html" },
-    { title: "Baby Gharial", image: "assets/track1.png", link: "track7.html" },
-    { title: "ItLies", image: "assets/track1.png", link: "track8.html" },
-    { title: "Winterscapes Ashlands", image: "assets/track1.png", link: "track9.html" },
-    { title: "hyperbole_samosa", image: "assets/track1.png", link: "track10.html" }
-  ];
-
 if (document.getElementById("trackGrid")) {
-    const gridContainer = document.getElementById("trackGrid");
-    const isMobile = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= 768;
+  const trackBoxes = document.querySelectorAll('.track-box');
+  
+  trackBoxes.forEach((box) => {
+    const img = box.querySelector('.track-image');
+    const label = box.querySelector('.track-title');
     
-    trackData.forEach((track, i) => {
-      const box = document.createElement("div");
-      const img = document.createElement("img");
-      const label = document.createElement("div");
-    
-      img.src = track.image;
-      img.className = "track-image";
-    
-      label.className = "track-title";
-      label.innerText = track.title;
-    
-      box.appendChild(img);
-      box.appendChild(label);
-    
-      if (!isMobile) {
-        const applyHoverEffect = (e) => {
-          const rect = box.getBoundingClientRect();
-          const x = e.clientX - rect.left - rect.width / 2;
-          const y = e.clientY - rect.top - rect.height / 2;
-    
-          gsap.to(img, {
-            duration: 0.05,
-            x: x / 10,
-            y: y / 10,
-            rotateY: x / 15,
-            rotateX: -y / 15,
-            ease: "power2.out",
-          });
-    
-          gsap.to(box, {
-            duration: 0.1,
-            backgroundColor: "#F5EF69",
-            ease: "power2.out",
-          });
-    
-          gsap.to(label, {
-            duration: 0.3,
-            color: "#000000",
-            ease: "power2.out",
-          });
-        };
-    
-        const removeHoverEffect = () => {
-          gsap.to(img, {
-            duration: 0.4,
-            x: 0,
-            y: 0,
-            rotateY: 0,
-            rotateX: 0,
-            ease: "power2.in",
-          });
-    
-          gsap.to(box, {
-            duration: 0.4,
-            backgroundColor: "#000000",
-            ease: "power2.in",
-          });
-    
-          gsap.to(label, {
-            duration: 0.4,
-            color: "#FFFFFF",
-            ease: "power2.in",
-          });
-        };
-    
-        box.addEventListener("mousemove", applyHoverEffect);
-        box.addEventListener("mouseleave", removeHoverEffect);
-      }
-    
-      box.addEventListener("click", () => {
-        window.location.href = track.link;
-      });
-    
-      gridContainer.appendChild(box);
-    });
-  }
+    if (!isMobile) {
+      const applyHoverEffect = (e) => {
+        const rect = box.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        gsap.to(img, {
+          duration: 0.05,
+          x: x / 10,
+          y: y / 10,
+          rotateY: x / 15,
+          rotateX: -y / 15,
+          ease: "power2.out",
+        });
+
+        gsap.to(box, {
+          duration: 0.1,
+          backgroundColor: "#F5EF69",
+          ease: "power2.out",
+        });
+
+        gsap.to(label, {
+          duration: 0.3,
+          color: "#000000",
+          ease: "power2.out",
+        });
+      };
+
+      const removeHoverEffect = () => {
+        gsap.to(img, {
+          duration: 0.4,
+          x: 0,
+          y: 0,
+          rotateY: 0,
+          rotateX: 0,
+          ease: "power2.in",
+        });
+
+        gsap.to(box, {
+          duration: 0.4,
+          backgroundColor: "#000000",
+          ease: "power2.in",
+        });
+
+        gsap.to(label, {
+          duration: 0.4,
+          color: "#FFFFFF",
+          ease: "power2.in",
+        });
+      };
+
+      box.addEventListener("mousemove", applyHoverEffect);
+      box.addEventListener("mouseleave", removeHoverEffect);
+    }
+  });
+}
   
   function autoSizeHeadings() {
     const lines = document.querySelectorAll('.heading-line');
@@ -134,7 +105,6 @@ if (document.getElementById("trackGrid")) {
   });
   
   
-  //fixing layout issues
   async function fullyReady() {
     await new Promise((resolve) => {
       if (document.readyState === 'complete' || document.readyState === 'interactive') {
