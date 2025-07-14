@@ -23,7 +23,7 @@
           </div>  
 
           <div class="track-card">
-            <img src="assets/track1.png" alt="Past Lives Track Cover" class="cover-img" />
+            <img src="assets/past-lives.jpg" alt="Past Lives Track Cover" class="cover-img" />
           </div>
 
       <div class="footer-links">
@@ -45,9 +45,16 @@
           </div>
 
           <div class="track-actions">
-            <button class="play-button">▶ Play Track</button>
-            <button class="download-button">↓ Download PDF</button>
+            <button class="play-button" aria-label="Play audio snippet">
+              <span class="button-text">Play Snippet</span>
+              <span class="loading-dots"><span></span></span>
+            </button>
+            <button class="download-button">Download PDF</button>
           </div>
+          <audio id="audioPlayer" preload="metadata">
+            <source src="assets/snippets/past-lives.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
           
           <div class="artist-credits">
             <div class="artist-item">

@@ -276,9 +276,113 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+/* Audio Player Styles */
+.track-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.play-button, .download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  font-family: "Space Mono", monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.05s ease, color 0.05s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.play-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  min-width: 160px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.play-button:hover,
+.download-button:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.play-button.playing {
+  background-color: white;
+  color: #000;
+}
+
+.button-text {
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.05s ease, transform 0.05s ease;
+}
+
+.loading-dots {
+  position: absolute;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  display: none;
+}
+
+.play-button.loading .loading-dots {
+  display: flex;
+}
+
+.loading-dots::before,
+.loading-dots::after,
+.loading-dots span {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: bounce 1s infinite ease-in-out both;
+}
+
+.loading-dots::before {
+  animation-delay: -0.32s;
+}
+
+.loading-dots span {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { 
+    transform: scale(0.6);
+  } 40% { 
+    transform: scale(1);
+  }
+}
+
+audio {
+  display: none;
+}
+
+.track-info {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 1rem;
   justify-content: flex-start;
   font-family: "Space Mono", monospace;
   box-sizing: border-box;

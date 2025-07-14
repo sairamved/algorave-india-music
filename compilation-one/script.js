@@ -134,6 +134,62 @@ if (document.getElementById("trackGrid")) {
   
   runLayoutFix();
   
+
+  function initAudioPlayer() {
+    const playButton = document.querySelector('.play-button');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const buttonText = playButton?.querySelector('.button-text');
+    
+    if (!playButton || !audioPlayer) return;
+    
+    let isPlaying = false;
+    
+    // Set audio to loop
+    audioPlayer.loop = true;
+    
+    // Initialize audio player
+    audioPlayer.addEventListener('canplaythrough', () => {
+      if (!isPlaying) {
+        playButton.classList.remove('loading');
+      }
+    });
+    
+    playButton.addEventListener('click', () => {
+      if (isPlaying) {
+        // Pause audio
+        audioPlayer.pause();
+        isPlaying = false;
+        
+        // Update UI
+        playButton.classList.remove('playing');
+        buttonText.textContent = 'Play Snippet';
+      } else {
+        // Show loading state
+        playButton.classList.add('loading');
+        
+        // Play audio
+        const playPromise = audioPlayer.play();
+        
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            isPlaying = true;
+            playButton.classList.remove('loading');
+            playButton.classList.add('playing');
+            buttonText.textContent = 'Pause Snippet';
+          }).catch(error => {
+            console.error('Error playing audio:', error);
+            playButton.classList.remove('loading');
+          });
+        }
+      }
+    });
+  }
+  
+
+  window.addEventListener('DOMContentLoaded', () => {
+    initAudioPlayer();
+  });
+  
   
   
   window.addEventListener('resize', autoSizeHeadings);
