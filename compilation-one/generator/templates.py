@@ -61,7 +61,8 @@ def index_block(slug, name):
         <div class="track-title">{name}</div>
         </div>""")
 
-def track_template(slug, name, number, track_artist, zine_artist, process, zine_link): 
+def track_template(slug, name, number, track_artist, track_artist_link, track_artist_bio,
+                   zine_artist, zine_artist_link, zine_artist_bio, process, zine_link): 
     return f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -106,7 +107,7 @@ def track_template(slug, name, number, track_artist, zine_artist, process, zine_
             <div class="track-info">
               <div class="track-header">
                 <h1 class="track-title">{name}</h1>
-                <div class="track-number">01</div>
+                <div class="track-number">{number}</div>
               </div>
 
               <div class="track-actions">
@@ -125,10 +126,25 @@ def track_template(slug, name, number, track_artist, zine_artist, process, zine_
                 <div class="artist-item">
                   <span class="artist-label">Track Artist</span>
                   <span class="artist-name">{track_artist}</span>
+                  <a href='{track_artist_link}'><span class="artist-link">{track_artist_link}</span></a>
+                  <details>
+                    <summary>Bio</summary>
+                    <div>
+                      {track_artist_bio}
+                    </div>
+                  </details>
                 </div>
+
                 <div class="artist-item">
                   <span class="artist-label">Zine Artist</span>
                   <span class="artist-name">{zine_artist}</span>
+                  <a href='{zine_artist_link}'><span class="artist-link">{zine_artist_link}</span></a>
+                  <details>
+                    <summary>Bio</summary>
+                    <div>
+                      {zine_artist_bio}
+                    </div>
+                  </details>
                 </div>
               </div>
               

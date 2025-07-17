@@ -449,6 +449,11 @@ audio {
   color: white;
 }
 
+.artist-link {
+  font-size: 0.75rem;
+  color: white;
+}
+
 .track-process {
   flex-grow: 1;
 }
@@ -609,4 +614,32 @@ audio {
     padding: 1rem;
     font-size: 0.9rem;
   }
+}
+
+details {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /*width: 300px;*/
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.8rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  list-style: none;
+  padding-left: 22px;
+}
+
+summary::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s;
+  
+}
+details[open] summary::before {
+  content: "−";
 }

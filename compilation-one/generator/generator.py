@@ -18,12 +18,19 @@ for i in range(10):
             row.track,
             row.number,
             row.track_artist,
-            row.zine_artist, 
+            row.track_artist_link,
+            row.track_artist_bio,
+            row.zine_artist,
+            row.zine_artist_link,
+            row.zine_artist_bio, 
             row.process,
             row.zine_link))
+
+    print(f"{row.slug} written!")
     # Append track info to index blocks
     blocks.append(index_block(row.slug, row.track))
 
 # Write index page
 with open(f"../index.html", "w") as f:
     f.write(index_template("\n".join(blocks)))
+print("Index page written!")
