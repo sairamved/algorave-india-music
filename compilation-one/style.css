@@ -93,6 +93,18 @@ html, body {
   color: #F5EF69;
 }
 
+a:not(.heading-link) {
+  color: #F5EF69;
+  text-decoration: none;
+}
+
+a:not(.heading-link):hover {
+  font-family: 'Space Mono', monospace;
+  font-style: italic;
+  color: #F5EF69;
+}
+
+
 .footer-links {
   display: flex;
   justify-content: space-between;
