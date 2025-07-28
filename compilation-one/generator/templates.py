@@ -17,7 +17,7 @@ def index_template(blocks):
             <div class="heading-wrapper">
                 <div class="heading-container">
                   <div class="heading-line" data-text="Algorave India">Algorave India</div>
-                  <div class="heading-line" data-text="Compilation Tape">Compilation Tape</div>
+                  <div class="heading-line" data-text="Compilation Tape">Compilation</div>
                   <div class="heading-line" data-text="Vol.1">Vol.1</div>
                 </div>
               </div>  
@@ -82,7 +82,7 @@ def track_template(slug, name, number, track_artist, track_artist_link, track_ar
                 <div class="heading-container">
                   <a href="index.html" class="heading-link">
                     <div class="heading-line" data-text="Algorave India">Algorave India</div>
-                    <div class="heading-line" data-text="Compilation Tape">Compilation Tape</div>
+                    <div class="heading-line" data-text="Compilation Tape">Compilation</div>
                     <div class="heading-line" data-text="Vol.1">Vol.1</div>
                   </a>
                 </div>
