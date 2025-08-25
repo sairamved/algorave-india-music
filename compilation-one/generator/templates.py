@@ -5,7 +5,7 @@ def index_template(blocks):
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Algorave India Compilation Tape Vol.1</title>
+      <title>Algorave India Compilation One</title>
       <link rel="stylesheet" href="style.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,9 +16,10 @@ def index_template(blocks):
         <section class="left">
             <div class="heading-wrapper">
                 <div class="heading-container">
-                  <div class="heading-line" data-text="Algorave India">Algorave India</div>
-                  <div class="heading-line" data-text="Compilation Tape">Compilation</div>
-                  <div class="heading-line" data-text="Vol.1">Vol.1</div>
+                  <a href="index.html" class="heading-link">
+                    <img src="/assets/cover-top.png" width="100%">
+                    <img src="/assets/cover-bottom.png" width="100%">
+                  </a>
                 </div>
               </div>  
 
@@ -82,8 +83,7 @@ def track_template(slug, name, number, track_artist, track_artist_link, track_ar
                 <div class="heading-container">
                   <a href="index.html" class="heading-link">
                     <div class="heading-line" data-text="Algorave India">Algorave India</div>
-                    <div class="heading-line" data-text="Compilation Tape">Compilation</div>
-                    <div class="heading-line" data-text="Vol.1">Vol.1</div>
+                    <div class="heading-line" data-text="Compilation One">Compilation One</div>
                   </a>
                 </div>
               </div>  
