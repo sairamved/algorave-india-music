@@ -17,8 +17,8 @@ def index_template(blocks):
             <div class="heading-wrapper">
                 <div class="heading-container">
                   <a href="index.html" class="heading-link">
-                    <img src="/assets/cover-top.png" width="100%">
-                    <img src="/assets/cover-bottom.png" width="100%">
+                    <img src="assets/cover-top.png" width="100%">
+                    <img src="assets/cover-bottom.png" width="100%">
                   </a>
                 </div>
               </div>  
