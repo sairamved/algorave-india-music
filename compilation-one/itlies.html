@@ -1,0 +1,105 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Algorave India Compilation Tape Vol.1</title>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <div class="container" data-barba="container" data-barba-namespace="itlies">
+        <section class="left">
+            <div class="heading-wrapper">
+                <div class="heading-container">
+                  <a href="index.html" class="heading-link">                  <div class="heading-container">
+                    <a href="index.html" class="heading-link">
+                      <img src="assets/cover-top.png" width="100%" class="cover-top" alt="Algorave India Compilation One">
+                      <!-- <img src="assets/cover-bottom.png" width="100%" class="cover-bottom" alt="Album Cover"> -->
+                    </a>
+                  </div></a>
+                </div>
+              </div>  
+
+              <div class="track-card">
+                <img src="assets/itlies.jpg" alt="ItLies Track Cover" class="cover-img" />
+              </div>
+
+          <div class="footer-links">
+            <a href="about.html" class="left-link">About</a>
+            <a href="https://opencollective.com/algorave-india" class="right-link">Contribute</a>
+          </div>
+        </section>
+
+        <section class="two-column-grid">
+          <div class="column">
+            <iframe src="https://editor.p5js.org/mikecj184/full/ONZVzsxqo" style="border: 0; width: 100%; height: 100vh;" seamless></iframe>  
+            <!-- <iframe src="sketch.html" style="border: 0; width: 100%; height: 100%;" seamless></iframe>   -->
+        </div>
+          <div class="column">
+            <div class="track-info">
+              <div class="track-header">
+                <h1 class="track-title">ItLies</h1>
+                <div class="track-number">3.0</div>
+              </div>
+
+              <div class="track-actions">
+                <button class="play-button" aria-label="Play audio snippet">
+                  <span class="button-text">Play Snippet</span>
+                  <span class="loading-dots"><span></span></span>
+                </button>
+                <a href="assets/zines/itlies.pdf" class="download-button" download>Download PDF</a>
+              </div>
+              <audio id="audioPlayer" preload="metadata">
+                <source src="assets/snippets/itlies.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+              
+              <div class="artist-credits">
+                <div class="artist-item">
+                  <span class="artist-label">Track Artist</span>
+                  <span class="artist-name">eardrummerman</span>
+                  <a href='https://manaswimishra.com/'><span class="artist-link">https://manaswimishra.com/</span></a>
+                  <details>
+                    <summary>Bio</summary>
+                    <div>
+                      eardrummerman aka Manaswi Mishra is a PhD researcher in the Opera of the Future group at the MIT Media Lab. His research explores strategies and frameworks for a new creative age of composing, performing and learning music using A.I. centered around bespoke human and cultural intent. Manaswi’s research on creating novel A.I. Lutherie can be seen in the development and performance of Operas like VALIS (2023), FLOW Symphony (2024, premiered in Seoul Arts Center) and exhibitions across the world (IFA Stuttgart ‘24, Burning Man ‘23, Boston tech poetics, Algorave India, Ljubljana Biennale 2025, Harvard Kirkland Art Gallery ‘24 etc.). His work on AI music performance and copyright law has been published and exhibited in the MIT Press, Harvard Tech Review, Washington Post, Boston Globe, Audio Developer Conference, Basel Academy of Art and Design FHNW, Conferences of Computational Creativity, ISEA Brisbane, CVPR 2024, Copyright Society 2023, Bloomberg Law etc. He also holds an MS in Media Arts and Sciences (MIT, 2021), MS in music technology (UPF, Barcelona) and a BTech (IITM, India). He is the founding instigator of the Music Tech Community in India organizing curricula, workshops, hackathons, conferences and community events across India.
+                    </div>
+                  </details>
+                </div>
+
+                <div class="artist-item">
+                  <span class="artist-label">Zine Artist</span>
+                  <span class="artist-name">ikecj</span>
+                  <a href='https://www.instagram.com/timeblurcollective'><span class="artist-link">https://www.instagram.com/timeblurcollective</span></a>
+                  <details>
+                    <summary>Bio</summary>
+                    <div>
+                      Mallikarjun is a technocrat from Bangalore, with a graduate degree in Electronics and Communication Engineering. He works primarily with Electronics, Signal Processing and Computer Graphics, which is applied in interdisciplinary fields such as Music, Software arts and Data Visualization. He loves being in the complexity of computer algorithms to generate beautiful artforms. The passion for making art lead to starting Timeblur Studio in 2015 as a Creative Technologist. Now exploring the depths of Genrative AI solutions at Amazon as a Design Technologist.
+                    </div>
+                  </details>
+                </div>
+              </div>
+              
+              <div class="track-process">
+                <h3 class="process-title">Process</h3>
+                <p class="process-description">
+                    eardrummerman: I have been seeking out the values of why I want to make music in an age of AI algorithms that compose pastiche. I took a poem I wrote in 2023, an angst against growing low effort, infinite synthesized media manipulation of manufacturing consent that we are snowballing towards. In this piece, I decided to compose using a bespoke setup where I create text to audio samples, audio to audio samples and also sample manipulations using strudel.cc all shaping material created from my voice.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+        
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+      <script src="https://unpkg.com/barba.js@2.9.7/dist/barba.min.js"></script>
+      <script src="script.js"></script>
+    </body>
+    </html>
+    

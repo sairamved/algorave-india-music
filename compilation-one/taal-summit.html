@@ -1,0 +1,105 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Algorave India Compilation Tape Vol.1</title>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <div class="container" data-barba="container" data-barba-namespace="taal-summit">
+        <section class="left">
+            <div class="heading-wrapper">
+                <div class="heading-container">
+                  <a href="index.html" class="heading-link">                  <div class="heading-container">
+                    <a href="index.html" class="heading-link">
+                      <img src="assets/cover-top.png" width="100%" class="cover-top" alt="Algorave India Compilation One">
+                      <!-- <img src="assets/cover-bottom.png" width="100%" class="cover-bottom" alt="Album Cover"> -->
+                    </a>
+                  </div></a>
+                </div>
+              </div>  
+
+              <div class="track-card">
+                <img src="assets/taal-summit.jpg" alt="Taal Summit Track Cover" class="cover-img" />
+              </div>
+
+          <div class="footer-links">
+            <a href="about.html" class="left-link">About</a>
+            <a href="https://opencollective.com/algorave-india" class="right-link">Contribute</a>
+          </div>
+        </section>
+
+        <section class="two-column-grid">
+          <div class="column">
+            <iframe src="https://editor.p5js.org/satyarth/full/DqhplVTv0" style="border: 0; width: 100%; height: 100vh;" seamless></iframe>  
+            <!-- <iframe src="sketch.html" style="border: 0; width: 100%; height: 100%;" seamless></iframe>   -->
+        </div>
+          <div class="column">
+            <div class="track-info">
+              <div class="track-header">
+                <h1 class="track-title">Taal Summit</h1>
+                <div class="track-number">7.0</div>
+              </div>
+
+              <div class="track-actions">
+                <button class="play-button" aria-label="Play audio snippet">
+                  <span class="button-text">Play Snippet</span>
+                  <span class="loading-dots"><span></span></span>
+                </button>
+                <a href="assets/zines/taal-summit.pdf" class="download-button" download>Download PDF</a>
+              </div>
+              <audio id="audioPlayer" preload="metadata">
+                <source src="assets/snippets/taal-summit.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+              
+              <div class="artist-credits">
+                <div class="artist-item">
+                  <span class="artist-label">Track Artist</span>
+                  <span class="artist-name">Trophallaxis</span>
+                  <a href='http://satyarth.me/trophallaxis/'><span class="artist-link">http://satyarth.me/trophallaxis/</span></a>
+                  <details>
+                    <summary>Bio</summary>
+                    <div>
+                      Satyarth Mishra Sharma is a researcher, musician, and visual artist based in Moscow. A member of the experimental music collective Moscow Noise Manufactory, his music project Trophallaxis brings an algorithmic approach to Indian classical music with electronic sounds.  As a tabla player, he seeks full cyborg integration with his instrument through DIY hardware and software while leaving its soul intact. He is also the founder of the visual duo Cactus Juice, which integrates generative live-coding and chaotic physical processes. His musical and artistic practice focuses on combining his two loves of tabla and cycling with otherworldly modulations and feedback loops. In his academic life, he’s recently completed his PhD in machine learning applied to genetics.
+                    </div>
+                  </details>
+                </div>
+
+                <div class="artist-item">
+                  <span class="artist-label">Zine Artist</span>
+                  <span class="artist-name">Roshini</span>
+                  <a href='https://www.linkedin.com/in/r-roshini/'><span class="artist-link">https://www.linkedin.com/in/r-roshini/</span></a>
+                  <details>
+                    <summary>Bio</summary>
+                    <div>
+                      Roshini is a systems designer who gravitates toward the in-between spaces, working with archival photography, graphic novels, jigsaw puzzles, and the quiet documentation of byproducts that gather around main events. She works in textures that move between the tactile and the digital: cyanotypes, embroidery, crayons, interactive sketches, and zines. Grounded in healthcare and innovation design, her practice leans on a systemic way of seeing, building spaces where craft, code, and narrative intersect. What draws her in are overlooked fragments such as out-of-print books, overlooked details, and stories tucked into margins that open up other ways of mapping and making sense of the world.
+                    </div>
+                  </details>
+                </div>
+              </div>
+              
+              <div class="track-process">
+                <h3 class="process-title">Process</h3>
+                <p class="process-description">
+                    Satyarth: When I set out to make a track for this compilation, I wanted to make something that highlights aspects of livecoding that set it apart from more traditional music production methods and decided to focus on playing with time. My main livecoding tool is Tidal Cycles, which takes a cyclical approach to time that it happens to share with Indian classical music. Within a time cycle, the taal determines how the cycle is subdivided into evenly spaced chunks. What I ended up with is a composition that takes a fixed time cycle and progresses through different numbers of divisions, from 1 up to the summit of 16 and then back down to 1. So it's a kind of journey through different taals, seamlessly cycling through them in a way that I think it'd be very hard for human musicians to do. I'm a tabla player, I've been learning for about 6 years now, and diving into the intricacies of Indian classical rhythms has been a very exciting journey. My guruji Ashish Mishra, who's always encouraging me to be a sound explorer even beyond the context of classical music, has been my biggest inspiration here, and the vocal samples in the intro and ending are from recordings of our classes.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+        
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+      <script src="https://unpkg.com/barba.js@2.9.7/dist/barba.min.js"></script>
+      <script src="script.js"></script>
+    </body>
+    </html>
+    
