@@ -306,7 +306,7 @@ a:not(.heading-link):hover {
   margin-bottom: 1rem;
 }
 
-.play-button, .download-button {
+.play-button, .download-button, .preorder-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
