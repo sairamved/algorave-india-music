@@ -524,6 +524,7 @@ audio {
   letter-spacing: 0.05em;
 }
 
+
 .play-button:hover {
   background: #F5EF69;
   color: black;
@@ -536,16 +537,48 @@ audio {
   font-style: normal !important;
 }
 
+
+.mobile-video-container {
+  display: none;
+}
+
 /* Responsive styles for mobile */
 @media (max-width: 768px), (orientation: portrait) {
   html, body {
     overflow-y: auto;
     overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   body.past-lives .left {
     height: auto;
     padding-bottom: 1rem;
+    width: 100%;
+  }
+  
+  /* Hide iframe and show mobile videos on mobile */
+  .p5-iframe {
+    display: none !important;
+  }
+  
+  .mobile-video-container {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+  
+  .mobile-video {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
   }
 
   .bandcamp-player {
@@ -554,6 +587,20 @@ audio {
     height: 140%;
     width: 100%;
     overflow: hidden;
+  }
+
+  .track-card {
+    display: none;
+  }
+
+  .mobile-video-container {
+    display: none;
+  }
+
+  .mobile-video {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .container {
