@@ -110,12 +110,20 @@ a:not(.heading-link):hover {
   justify-content: space-between;
   font-family: 'Space Mono', monospace;
   padding-bottom: env(safe-area-inset-bottom);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .footer-links a {
   color: white;
   text-decoration: none;
 }
+
+.footer-links .preorder-link {
+  color: #F5EF69;
+  text-align: right;
+}
+
 
 .right {
   display: grid;
@@ -241,7 +249,7 @@ a:not(.heading-link):hover {
   font-family: "Space Mono", monospace;
   font-size: 0.9rem;
   color: white;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   text-align: justify;
 }
 
@@ -250,7 +258,7 @@ a:not(.heading-link):hover {
   justify-content: space-evenly;
   align-items: center;
   gap: 2rem;
-  margin: 0 0 2em 0;
+  margin-top: auto;
 }
 
 .logo-link {
@@ -259,7 +267,7 @@ a:not(.heading-link):hover {
 }
 
 .landing-logo {
-  max-width: 100px;
+  max-width: 90px;
   height: auto;
   display: block;
   opacity: 100%;
@@ -306,7 +314,7 @@ a:not(.heading-link):hover {
   margin-bottom: 1rem;
 }
 
-.play-button, .download-button, .preorder-button {
+.play-button, .download-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -336,7 +344,8 @@ a:not(.heading-link):hover {
 }
 
 .play-button:hover,
-.download-button:hover {
+.download-button:hover,
+.download-button:hover a {
   background-color: #ffcc00;
   color: #000;
 }
@@ -515,6 +524,7 @@ audio {
   letter-spacing: 0.05em;
 }
 
+
 .play-button:hover {
   background: #F5EF69;
   color: black;
@@ -523,7 +533,13 @@ audio {
 
 .download-button:hover {
   background: white;
-  color: black;
+  color: black !important;
+  font-style: normal !important;
+}
+
+
+.mobile-video-container {
+  display: none;
 }
 
 /* Responsive styles for mobile */
@@ -531,11 +547,38 @@ audio {
   html, body {
     overflow-y: auto;
     overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   body.past-lives .left {
     height: auto;
     padding-bottom: 1rem;
+    width: 100%;
+  }
+  
+  /* Hide iframe and show mobile videos on mobile */
+  .p5-iframe {
+    display: none !important;
+  }
+  
+  .mobile-video-container {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+  
+  .mobile-video {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
   }
 
   .bandcamp-player {
@@ -544,6 +587,20 @@ audio {
     height: 140%;
     width: 100%;
     overflow: hidden;
+  }
+
+  .track-card {
+    display: none;
+  }
+
+  .mobile-video-container {
+    display: none;
+  }
+
+  .mobile-video {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .container {
@@ -618,11 +675,11 @@ audio {
   }
 
   .track-title {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .track-number {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .track-actions {
@@ -634,6 +691,10 @@ audio {
   .download-button {
     padding: 1rem;
     font-size: 0.9rem;
+  }
+
+  .logo-row {
+    margin-top: 2rem;
   }
 }
 
